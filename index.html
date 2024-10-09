@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heidi Tandiono</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white; /* Main background color */
+            color: #1E3189; /* Dark text color */
+        }
+
+        /* Full-screen Logo and About Me Section */
+        #logo {
+            height: 100vh;
+            background-color: white; /* Logo section background */
+            display: flex;
+            flex-direction: row; /* Side by side layout */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #logo img {
+            width: 60%; /* Increased logo image width to 60% */
+            max-height: 80%; /* Adjusted max height to keep proportion */
+            object-fit: cover; /* Ensures the logo resizes to cover the area */
+        }
+
+        /* About Me Text */
+        #about-text {
+            padding: 2rem; /* Space around text */
+            width: 50%; /* Text takes half the width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center text vertically */
+        }
+
+        h1 {
+            font-size: 2rem; /* Increased font size for the heading */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1E3189; /* Darkest blue for the navigation bar */
+            position: fixed;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            top: 0;
+            z-index: 999;
+        }
+        nav a {
+            color: #FFEAEC; /* Light pink for navigation links */
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 300;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* General Section Styles */
+        section {
+            margin: 2rem;
+            padding: 2rem;
+            background-color: #FFEAEC; /* Light pink section background */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #1E3189; /* Dark heading color */
+        }
+        p {
+            color: #1E3189; /* Dark paragraph color */
+            font-size: 1.2rem; /* Adjusted font size */
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #logo {
+                flex-direction: column; /* Stack logo and text */
+                height: auto; /* Adjust height for smaller screens */
+            }
+            #logo img {
+                width: 100%; /* Logo takes full width */
+                max-height: none; /* No height restriction */
+            }
+            #about-text {
+                width: 100%; /* Text takes full width */
+                padding: 1rem; /* Space around text */
+                text-align: center; /* Center text */
+            }
+            h1 {
+                font-size: 1.5rem; /* Adjusted heading size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo and About Me Section -->
+    <section id="logo">
+        <img src="Name.png" alt="Name">
+        <div id="about-text">
+            <h1>Hi! I'm Heidi, a data analyst passionate about transforming complex data into actionable insights. I have a background in biochemistry and am currently pursuing my Master’s in Analytics. I enjoy working at the intersection of data science and public health, and I love collaborating on projects that make a difference!</h1>
+        </div>
+    </section>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#socials">Socials</a>
+        <a href="#resume">Resume</a>
+    </nav>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Under construction.</p>
+    </section>
+
+    <!-- Socials Section -->
+    <section id="socials">
+        <h2>Socials</h2>
+        <p>Under construction.</p>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Under construction.</p>
+    </section>
+
+</body>
+</html>
