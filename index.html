@@ -23,9 +23,9 @@
             color: #1E3189; /* Dark text color */
         }
 
-        /* Full-screen Logo and About Me Section */
+        /* Logo and About Me Section */
         #logo {
-            height: 75vh; /* Adjusted height */
+            height: 64vh; /* Adjusted height */
             background-color: white; /* Same background color as the body */
             display: flex;
             flex-direction: row;
@@ -35,6 +35,8 @@
             overflow: hidden;
             border: none; /* Remove any border */
             box-shadow: none; /* Remove any shadow */
+            margin-bottom: 0; /* Ensure no margin at the bottom */
+            padding-bottom: 0;
         }
 
         #logo img {
@@ -104,7 +106,7 @@
         }
 
         nav a:hover {
-            color: #f13c20; /* Change to another color on hover */
+            color: #ed86a1; /* Change to another color on hover */
         }
 
         /* Scroll Animation for Sections */
@@ -147,13 +149,22 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Banner Image */
+        #banner {
+            width: 100%; /* Make the image span the full width of the page */
+            height: auto; /* Adjust the height proportionally */
+            display: block; /* Ensures no extra space around the image */
+            margin: 0 auto; /* Center the banner horizontally */
+            padding: 0;
+        }
         
         /* Projects Section */
         #projects {
             display: flex; /* Use Flexbox for layout */
             flex-wrap: wrap; /* Allow items to wrap to the next line */
             justify-content: center; /* Center the boxes horizontally */
-            margin-top: 4rem; /* Optional: add margin to separate from the previous section */
+            margin-top: 3rem; /* Optional: add margin to separate from the previous section */
             text-align: center; /* Center align content within the section */
         }
 
@@ -167,8 +178,8 @@
         /* Project Boxes */
         .project-box {
             background-color: #FFEAEC; /* Light pink background */
-            border: 4px solid #5e6998; /* Outline color */
-            border-radius: 25px; /* Rounded corners */
+            border: 6px solid #ffcedf; /* Outline color */
+            border-radius: 30px; /* Rounded corners */
             margin: 2.5rem; /* Space around boxes */
             padding: 1rem; /* Space inside boxes */
             text-align: center; /* Center text inside boxes */
@@ -225,6 +236,9 @@
         </div>
     </section>
 
+    <!-- Banner Image Section -->
+    <img id="banner" src="images/banner.png" alt="Banner Image">
+
     <!-- Navigation Bar -->
     <nav>
         <a href="#logo">About Me</a>
@@ -270,24 +284,27 @@
     </section>
 
     <script>
-        // Detect when sections enter the viewport
+        // Detect when sections enter or leave the viewport
         const sections = document.querySelectorAll("section");
-        
+    
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // Add 'in-view' class when the section is in view
                     entry.target.classList.add("in-view");
+                } else {
+                    // Remove 'in-view' class when the section is out of view
+                    entry.target.classList.remove("in-view");
                 }
             });
         }, {
             threshold: 0.1, // Trigger when 10% of the section is in view
         });
-        
+    
         // Apply observer to all sections
         sections.forEach(section => {
             observer.observe(section);
         });
-        </script>        
-
+    </script>    
 </body>
 </html>
