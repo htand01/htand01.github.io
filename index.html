@@ -25,7 +25,7 @@
 
         /* Logo and About Me Section */
         #logo {
-            height: 64vh; /* Adjusted height */
+            height: 65vh; /* Adjusted height */
             background-color: white; /* Same background color as the body */
             display: flex;
             flex-direction: row;
@@ -43,18 +43,16 @@
             width: 60%;
             max-height: 90%;
             object-fit: cover;
-            animation: fadeInScale 2s ease-in-out forwards; /* Apply animation */
+            animation: fadeInScale 5s ease-in-out forwards; /* Apply animation */
         }
 
         /* Keyframes for Fade In and Scale Up */
-        @keyframes fadeInScale {
+        @keyframes fadeIn {
             0% {
                 opacity: 0;
-                transform: scale(0.8);
             }
             100% {
                 opacity: 1;
-                transform: scale(1);
             }
         }
 
@@ -65,17 +63,15 @@
             display: flex;
             flex-direction: column;
             justify-content: center; /* Center text vertically */
-            animation: fadeInScale 2s ease-in-out forwards; /* Apply animation */
+            animation: fadeInScale 5s ease-in-out forwards; /* Apply animation */
         }
         /* Keyframes for Fade In and Scale Up */
-        @keyframes fadeInScale {
+        @keyframes fadeIn {
             0% {
                 opacity: 0;
-                transform: scale(0.8);
             }
             100% {
                 opacity: 1;
-                transform: scale(1);
             }
         }
 
@@ -111,7 +107,8 @@
 
         /* Scroll Animation for Sections */
         section {
-            margin: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 0;
             padding: 2rem;
             background-color: white;
             border-radius: 8px;
@@ -157,16 +154,22 @@
             display: block; /* Ensures no extra space around the image */
             margin: 0 auto; /* Center the banner horizontally */
             padding: 0;
+            animation: fadeIn 1s ease-in-out ; /* Apply animation */
         }
         
         /* Projects Section */
         #projects {
             display: flex; /* Use Flexbox for layout */
-            flex-wrap: wrap; /* Allow items to wrap to the next line */
-            justify-content: center; /* Center the boxes horizontally */
-            margin-top: 3rem; /* Optional: add margin to separate from the previous section */
+            flex-direction: column; /* Arrange items vertically */
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            height: 100vh; /* Full viewport height */
+            margin-top: 3rem; /* Maintain margin at the top */
+            margin-bottom: 3rem; /* Maintain margin at the bottom */
             text-align: center; /* Center align content within the section */
+            padding: 2rem; /* Padding for inner spacing */
         }
+
 
         /* Project Container */
         .project-container {
@@ -205,6 +208,42 @@
             margin-top: 0.25rem; /* Space between text and logo */
         }
 
+        /* Footer Styles */
+        footer {
+            background-color: #1E3189; /* Background color for the footer */
+            color: #FFEAEC; /* Text color for the footer */
+            text-align: center; /* Center text in the footer */
+            padding: 5rem; /* Add padding to increase the height */
+            position: relative; /* Keep it at the bottom of the page */
+            width: 100%; /* Full width */
+            margin-top: auto; /* Ensure it stays at the bottom */
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .footer-socials a {
+            color: #FFEAEC; /* Link color */
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 300;
+            transition: color 0.3s ease-in-out; /* Smooth color transition */
+        }
+
+        .footer-socials a:hover {
+            color: #ed86a1; /* Color on hover */
+        }
+
+        .thank-you-message {
+            margin-top: 1rem; /* Space above the message */
+            font-size: 1.2rem; /* Adjust font size */
+            color: #FFEAEC; /* Message color */
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             #logo {
@@ -216,12 +255,14 @@
                 max-height: none; /* No height restriction */
             }
             #about-text {
-                width: 100%; /* Text takes full width */
-                padding: 1rem; /* Space around text */
-                text-align: center; /* Center text */
+                width: 90%; /* Adjust width for smaller screens */
             }
-            h1 {
-                font-size: 1.5rem; /* Adjusted heading size for mobile */
+            .project-box {
+                width: 100%; /* Boxes take full width */
+                height: auto; /* Adjust height automatically */
+            }
+            footer {
+                padding: 2rem; /* Reduced padding for mobile */
             }
         }
     </style>
@@ -243,8 +284,7 @@
     <nav>
         <a href="#logo">About Me</a>
         <a href="#projects">Projects</a>
-        <a href="#socials">Socials</a>
-        <a href="#resume">Resume</a>
+        <a href="#footer">Let's Connect!</a>
     </nav>
 
     <!-- Projects Section -->
@@ -271,17 +311,18 @@
     </section>
 
 
-    <!-- Socials Section -->
-    <section id="socials">
-        <h1>Socials</h1>
-        <p>Under construction.</p>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume">
-        <h1>Resume</h1>
-        <p>Under construction.</p>
-    </section>
+    <!-- Footer Section -->
+    <footer id="footer">
+        <h1 class ="footer-title">Let's connect!</h1>
+        <div class="footer-container">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/heidi-tandiono/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/htand01" target="_blank">GitHub</a>
+                <a href="mailto:htand01@hotmail.com">Email</a>
+            </div>
+            <div class="thank-you-message">Thank you for stopping by!</div>
+        </div>
+    </footer>
 
     <script>
         // Detect when sections enter or leave the viewport
