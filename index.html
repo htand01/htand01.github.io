@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heidi Tandiono</title>
     <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">    
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Gamja Flower', sans-serif;
             margin: 0;
             padding: 0;
             background-color: white; /* Main background color */
@@ -17,20 +25,35 @@
 
         /* Full-screen Logo and About Me Section */
         #logo {
-            height: 100vh;
-            background-color: white; /* Logo section background */
+            height: 75vh; /* Adjusted height */
+            background-color: white; /* Same background color as the body */
             display: flex;
-            flex-direction: row; /* Side by side layout */
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             text-align: center;
             overflow: hidden;
+            border: none; /* Remove any border */
+            box-shadow: none; /* Remove any shadow */
         }
 
         #logo img {
-            width: 60%; /* Increased logo image width to 60% */
-            max-height: 80%; /* Adjusted max height to keep proportion */
-            object-fit: cover; /* Ensures the logo resizes to cover the area */
+            width: 60%;
+            max-height: 90%;
+            object-fit: cover;
+            animation: fadeInScale 2s ease-in-out forwards; /* Apply animation */
+        }
+
+        /* Keyframes for Fade In and Scale Up */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         /* About Me Text */
@@ -40,11 +63,24 @@
             display: flex;
             flex-direction: column;
             justify-content: center; /* Center text vertically */
+            animation: fadeInScale 2s ease-in-out forwards; /* Apply animation */
+        }
+        /* Keyframes for Fade In and Scale Up */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         h1 {
             font-size: 2rem; /* Increased font size for the heading */
             margin: 0; /* Remove default margin */
+            text-align: center; /* Center align section titles */
         }
 
         /* Navigation Bar */
@@ -57,35 +93,105 @@
             top: 0;
             z-index: 999;
         }
+        /* Navigation Hover Effect */
         nav a {
-            color: #FFEAEC; /* Light pink for navigation links */
+            color: #FFEAEC;
             text-decoration: none;
             margin: 0 1rem;
             font-weight: 300;
+            position: relative;
+            transition: color 0.3s ease-in-out; /* Smooth color transition */
         }
+
         nav a:hover {
-            text-decoration: underline;
+            color: #f13c20; /* Change to another color on hover */
+        }
+
+        /* Scroll Animation for Sections */
+        section {
+            margin: 2rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(50px); /* Move section down initially */
+            transition: all 0.6s ease-in-out; /* Smooth transition */
+        }
+
+        /* When section comes into view */
+        section.in-view {
+            opacity: 1;
+            transform: translateY(0); /* Move section back to its position */
         }
 
         /* General Section Styles */
         section {
             margin: 2rem;
             padding: 2rem;
-            background-color: #FFEAEC; /* Light pink section background */
+            background-color: white; /* Light pink section background */
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: none;
         }
         h2 {
             color: #1E3189; /* Dark heading color */
+            text-align: center; /* Center align section titles */
         }
         p {
             color: #1E3189; /* Dark paragraph color */
             font-size: 1.2rem; /* Adjusted font size */
+            text-align: center;
         }
 
         /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
+        }
+        
+        /* Projects Section */
+        #projects {
+            display: flex; /* Use Flexbox for layout */
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: center; /* Center the boxes horizontally */
+            margin-top: 4rem; /* Optional: add margin to separate from the previous section */
+            text-align: center; /* Center align content within the section */
+        }
+
+        /* Project Container */
+        .project-container {
+            display: flex; /* Use flexbox to align items horizontally */
+            justify-content: center; /* Center the boxes */
+            flex-wrap: wrap; /* Allow boxes to wrap to the next line if needed */
+        }
+
+        /* Project Boxes */
+        .project-box {
+            background-color: #FFEAEC; /* Light pink background */
+            border: 2px solid #1E3189; /* Outline color */
+            border-radius: 8px; /* Rounded corners */
+            margin: 1rem; /* Space around boxes */
+            padding: 1rem; /* Space inside boxes */
+            text-align: center; /* Center text inside boxes */
+            width: 150px; /* Set a fixed width */
+            height: 150px; /* Set a fixed height */
+            display: flex; /* Enable flexbox for inner content */
+            flex-direction: column; /* Arrange items vertically */
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: transform 0.3s; /* Add hover effect */
+        }
+
+        /* Hover Effect */
+        .project-box:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Project Box Images */
+        .project-box img {
+            width: 30px; /* Adjust logo size */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 0.5rem; /* Space between text and logo */
         }
 
         /* Responsive Design */
@@ -121,7 +227,7 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="#about">About Me</a>
+        <a href="#logo">About Me</a>
         <a href="#projects">Projects</a>
         <a href="#socials">Socials</a>
         <a href="#resume">Resume</a>
@@ -129,21 +235,59 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
-        <p>Under construction.</p>
+        <h1 class="project-header">Projects</h1>
+        <div class="project-container">
+            <div class="project-box" onclick="location.href='r-projects.html';">
+                <span>R</span>
+                <img src="logo_R.png" alt="R Logo" />
+            </div>
+            <div class="project-box" onclick="location.href='python-projects.html';">
+                <span>Python</span>
+                <img src="logo_python.png" alt="Python Logo" />
+            </div>
+            <div class="project-box" onclick="location.href='tableau-projects.html';">
+                <span>Tableau</span>
+                <img src="logo_tableau.png" alt="Tableau Logo" />
+            </div>
+            <div class="project-box" onclick="location.href='powerbi-projects.html';">
+                <span>PowerBI</span>
+                <img src="logo_powerbi.png" alt="Power BI Logo" />
+            </div>
+        </div>
     </section>
+
 
     <!-- Socials Section -->
     <section id="socials">
-        <h2>Socials</h2>
+        <h1>Socials</h1>
         <p>Under construction.</p>
     </section>
 
     <!-- Resume Section -->
     <section id="resume">
-        <h2>Resume</h2>
+        <h1>Resume</h1>
         <p>Under construction.</p>
     </section>
+
+    <script>
+        // Detect when sections enter the viewport
+        const sections = document.querySelectorAll("section");
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the section is in view
+        });
+        
+        // Apply observer to all sections
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+        </script>        
 
 </body>
 </html>
