@@ -3,366 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heidi Tandiono</title>
-    <!-- Link to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Gamja Flower', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white; /* Main background color */
-            color: #1E3189; /* Dark text color */
-        }
-
-        /* Logo and About Me Section */
-        #logo {
-            height: 65vh; /* Adjusted height */
-            background-color: white; /* Same background color as the body */
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            overflow: hidden;
-            border: none; /* Remove any border */
-            box-shadow: none; /* Remove any shadow */
-            margin-bottom: 0; /* Ensure no margin at the bottom */
-            padding-bottom: 0;
-        }
-
-        #logo img {
-            width: 60%;
-            max-height: 90%;
-            object-fit: cover;
-            animation: fadeInScale 5s ease-in-out forwards; /* Apply animation */
-        }
-
-        /* Keyframes for Fade In and Scale Up */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* About Me Text */
-        #about-text {
-            padding: 2rem; /* Space around text */
-            width: 50%; /* Text takes half the width */
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center text vertically */
-            animation: fadeInScale 5s ease-in-out forwards; /* Apply animation */
-        }
-        /* Keyframes for Fade In and Scale Up */
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        h1 {
-            font-size: 2rem; /* Increased font size for the heading */
-            margin: 0; /* Remove default margin */
-            text-align: center; /* Center align section titles */
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #1E3189; /* Darkest blue for the navigation bar */
-            position: fixed;
-            width: 100%;
-            padding: 1rem;
-            text-align: center;
-            top: 0;
-            z-index: 999;
-        }
-        /* Navigation Hover Effect */
-        nav a {
-            color: #FFEAEC;
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 300;
-            position: relative;
-            transition: color 0.3s ease-in-out; /* Smooth color transition */
-        }
-
-        nav a:hover {
-            color: #ed86a1; /* Change to another color on hover */
-        }
-
-        /* Scroll Animation for Sections */
-        section {
-            margin-top: 1rem;
-            margin-bottom: 0;
-            padding: 2rem;
-            background-color: rgb(238, 236, 255);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            transform: translateY(50px); /* Move section down initially */
-            transition: all 0.6s ease-in-out; /* Smooth transition */
-        }
-
-        /* When section comes into view */
-        section.in-view {
-            opacity: 1;
-            transform: translateY(0); /* Move section back to its position */
-        }
-
-        /* General Section Styles */
-        section {
-            margin: 2rem;
-            padding: 2rem;
-            background-color: white; /* Light pink section background */
-            border-radius: 8px;
-            box-shadow: none;
-        }
-        h2 {
-            color: #1E3189; /* Dark heading color */
-            text-align: center; /* Center align section titles */
-        }
-        p {
-            color: #1E3189; /* Dark paragraph color */
-            font-size: 1.2rem; /* Adjusted font size */
-            text-align: center;
-        }
-
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Banner Image */
-        #banner {
-            width: 100%; /* Make the image span the full width of the page */
-            height: auto; /* Adjust the height proportionally */
-            display: block; /* Ensures no extra space around the image */
-            margin: 0 auto; /* Center the banner horizontally */
-            padding: 0;
-            animation: fadeIn 1s ease-in-out ; /* Apply animation */
-        }
-        
-        /* Projects Section */
-        #projects {
-            display: flex; /* Use Flexbox for layout */
-            flex-direction: column; /* Arrange items vertically */
-            justify-content: center; /* Center items vertically */
-            align-items: center; /* Center items horizontally */
-            height: 100vh; /* Full viewport height */
-            margin-top: 3rem; /* Maintain margin at the top */
-            margin-bottom: 3rem; /* Maintain margin at the bottom */
-            text-align: center; /* Center align content within the section */
-            padding: 2rem; /* Padding for inner spacing */
-        }
-
-
-        /* Project Container */
-        .project-container {
-            display: flex; /* Use flexbox to align items horizontally */
-            justify-content: center; /* Center the boxes */
-            flex-wrap: wrap; /* Allow boxes to wrap to the next line if needed */
-        }
-
-        /* Project Boxes */
-        .project-box {
-            background-color: #FFEAEC; /* Light pink background */
-            border: 6px solid #ffcedf; /* Outline color */
-            border-radius: 30px; /* Rounded corners */
-            margin: 2.5rem; /* Space around boxes */
-            padding: 1rem; /* Space inside boxes */
-            text-align: center; /* Center text inside boxes */
-            width: 230px; /* Set a fixed width */
-            height: 230px; /* Set a fixed height */
-            display: flex; /* Enable flexbox for inner content */
-            flex-direction: column; /* Arrange items vertically */
-            justify-content: center; /* Center items vertically */
-            align-items: center; /* Center items horizontally */
-            cursor: pointer; /* Change cursor to pointer */
-            transition: transform 0.3s; /* Add hover effect */
-        }
-
-        /* Hover Effect */
-        .project-box:hover {
-            transform: scale(1.05); /* Slightly enlarge on hover */
-        }
-
-        /* Project Box Images */
-        .project-box img {
-            width: 180px; /* Adjust logo size */
-            height: auto; /* Maintain aspect ratio */
-            margin-top: 0.25rem; /* Space between text and logo */
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #1E3189; /* Background color for the footer */
-            color: #FFEAEC; /* Text color for the footer */
-            text-align: center; /* Center text in the footer */
-            padding: 5rem; /* Add padding to increase the height */
-            position: relative; /* Keep it at the bottom of the page */
-            width: 100%; /* Full width */
-            margin-top: auto; /* Ensure it stays at the bottom */
-        }
-
-        .footer-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .footer-socials a {
-            color: #FFEAEC; /* Link color */
-            text-decoration: none;
-            margin: 0 1rem;
-            font-weight: 300;
-            transition: color 0.3s ease-in-out; /* Smooth color transition */
-        }
-
-        .footer-socials a:hover {
-            color: #ed86a1; /* Color on hover */
-        }
-
-        .thank-you-message {
-            margin-top: 1rem; /* Space above the message */
-            font-size: 1.2rem; /* Adjust font size */
-            color: #FFEAEC; /* Message color */
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            #logo {
-                flex-direction: column; /* Stack logo and text */
-                height: auto; /* Adjust height for smaller screens */
-            }
-            #logo img {
-                width: 100%; /* Logo takes full width */
-                max-height: none; /* No height restriction */
-            }
-            #about-text {
-                width: 90%; /* Adjust width for smaller screens */
-            }
-            #about-text h1 { /* Target the h1 directly */
-                font-size: 1.3rem; /* Adjust this value for smaller font size */
-            }
-            .project-box {
-                width: 120px; /* Smaller box width */
-                height: 120px; /* Smaller box height */
-                border: 4px solid #ffcedf; /* Adjust border thickness and color */
-                margin: 6px;
-            }
-            .project-box img{
-                width: 90px; /* Smaller box width */
-                height: 90px; /* Smaller box height */
-            } 
-                /* Add text size adjustment for project boxes */
-            .project-box h2,
-            .project-box h3 { 
-                font-size: 1rem; /* Smaller font size for text */
-            }
-
-            footer {
-                padding: 2rem; /* Reduced padding for mobile */
-                position: relative; /* Change position to relative */
-            }
-        }
-
-    </style>
+    <title>Heidi Tandiono - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <img src="Name 2.png" alt="Heidi Tandiono Logo" class="logo">
+    </header>
 
-    <!-- Logo and About Me Section -->
-    <section id="logo">
-        <img src="Name 2.PNG" alt="Name">
-        <div id="about-text">
-            <h1>Hi! I'm Heidi, a data analyst passionate about transforming complex data into actionable insights. I have a background in biochemistry and am currently pursuing my Master’s in Analytics. I enjoy working at the intersection of data science and public health, and I love collaborating on projects that make a difference!</h1>
-        </div>
-    </section>
-
-    <!-- Banner Image Section -->
-    <img id="banner" src="images/banner.png" alt="Banner Image">
-
-    <!-- Navigation Bar -->
-    <nav>
-        <a href="#logo">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#footer">Let's Connect!</a>
-    </nav>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h1 class="project-header">Projects</h1>
-        <div class="project-container">
-            <div class="project-box" onclick="location.href='r-projects.html';">
-                <h2>R Studio</h2>
-                <img src="images/R-logo.png" alt="R Logo" />
-            </div>
-            <div class="project-box" onclick="location.href='python-projects.html';">
-                <h2>Python</h2>
-                <img src="images/python-logo.png" alt="Python Logo" />
-            </div>
-            <div class="project-box" onclick="location.href='tableau-projects.html';">
-                <h2>Tableau</h2>
-                <img src="images/tableau-logo.png" alt="Tableau Logo" />
-            </div>
-            <div class="project-box" onclick="location.href='powerbi-projects.html';">
-                <h2>PowerBI</h2>
-                <img src="images/powerbi-logo.png" alt="Power BI Logo" />
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer Section -->
-    <footer id="footer">
-        <h1 class ="footer-title">Let's connect!</h1>
-        <div class="footer-container">
-            <div class="footer-socials">
+    <main>
+        <section id="about">
+            <h1>Hi there! 👋 I'm Heidi, a data analyst passionate about transforming complex data into actionable insights. I have a background in biochemistry and am currently pursuing my Master’s in Analytics. I enjoy working at the intersection of data science and public health, and I love collaborating on projects that make a difference. In my spare time, I like to draw!</h1>
+        </section>
+        
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <a href="#" onclick="togglePreview(event, 'preview1')">Analyzing medical device failure</a> [Tableau public dashboard]
+                    <div id="preview1" class="project-preview">
+                        <p>Explore data on medical device failures and understand key insights on device safety.</p>
+                        <a href="project1.html" class="preview-link">View Project</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" onclick="togglePreview(event, 'preview2')">Diabetes in women</a> [RShiny app & course project]
+                    <div id="preview2" class="project-preview">
+                        <iframe src="https://htand01.shinyapps.io/final/" title="Diabetes in Women RShiny App" width="100%" height="400" style="border: none;"></iframe>
+                        <a href="https://htand01.shinyapps.io/final/" target="_blank" class="preview-link">Open Full App</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" onclick="togglePreview(event, 'preview3')">Implementing the Metropolis-Hastings algorithm</a> [Bayesian statistics in R]
+                    <div id="preview3" class="project-preview">
+                        <p>A Bayesian approach to implement the Metropolis-Hastings algorithm in R for data modeling.</p>
+                        <a href="project3.html" class="preview-link">View Project</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" onclick="togglePreview(event, 'preview4')">Global boardgame popularity</a> [Tableau public dashboard]
+                    <div id="preview4" class="project-preview">
+                        <!-- Tableau Embed Code Starts Here -->
+                        <div class='tableauPlaceholder' id='viz1730244056725' style='position: relative'>
+                            <noscript>
+                                <a href='#'>
+                                    <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Bo/Board_games/Dashboard1/1_rss.png' style='border: none' />
+                                </a>
+                            </noscript>
+                            <object class='tableauViz' style='display:none;'>
+                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                                <param name='embed_code_version' value='3' />
+                                <param name='site_root' value='' />
+                                <param name='name' value='Board_games/Dashboard1' />
+                                <param name='tabs' value='no' />
+                                <param name='toolbar' value='yes' />
+                                <param name='static_image' value='https://public.tableau.com/static/images/Bo/Board_games/Dashboard1/1.png' />
+                                <param name='animate_transition' value='yes' />
+                                <param name='display_static_image' value='yes' />
+                                <param name='display_spinner' value='yes' />
+                                <param name='display_overlay' value='yes' />
+                                <param name='display_count' value='yes' />
+                                <param name='language' value='en-US' />
+                            </object>
+                        </div>
+                        <script type='text/javascript'>
+                            var divElement = document.getElementById('viz1730244056725');
+                            var vizElement = divElement.getElementsByTagName('object')[0];
+                            if ( divElement.offsetWidth > 800 ) {
+                                vizElement.style.width='1000px'; vizElement.style.height='1327px';
+                            } else if ( divElement.offsetWidth > 500 ) {
+                                vizElement.style.width='1000px'; vizElement.style.height='1327px';
+                            } else {
+                                vizElement.style.width='100%'; vizElement.style.height='400px';
+                            }
+                            var scriptElement = document.createElement('script');
+                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                        </script>
+                        <!-- Tableau Embed Code Ends Here -->
+        
+                        <a href="https://public.tableau.com/views/Board_games/Dashboard1" target="_blank" class="preview-link">Open Full Dashboard</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" onclick="togglePreview(event, 'preview5')">Optimizing kidney donations</a> [Analytical plan & course project]
+                    <div id="preview5" class="project-preview">
+                        <iframe src="https://docs.google.com/document/d/1YQMDXml4bAs80ejucrA9eR6luBY27SIL/preview" 
+                                width="100%" height="600" style="border: none;"></iframe>
+                        <a href="https://docs.google.com/document/d/1YQMDXml4bAs80ejucrA9eR6luBY27SIL/edit?usp=sharing" 
+                           target="_blank" class="preview-link">Open Full Document</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-links">
                 <a href="https://www.linkedin.com/in/heidi-tandiono/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/htand01" target="_blank">GitHub</a>
-                <a href="mailto:htand01@hotmail.com">Email</a>
             </div>
             <div class="thank-you-message">Thank you for stopping by!</div>
-        </div>
-    </footer>
+        </section>
+    </main>
 
     <script>
-        // Detect when sections enter or leave the viewport
-        const sections = document.querySelectorAll("section");
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add 'in-view' class when the section is in view
-                    entry.target.classList.add("in-view");
-                } else {
-                    // Remove 'in-view' class when the section is out of view
-                    entry.target.classList.remove("in-view");
-                }
-            });
-        }, {
-            threshold: 0.1, // Trigger when 10% of the section is in view
-        });
-    
-        // Apply observer to all sections
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>    
+        function togglePreview(event, previewId) {
+            event.preventDefault();
+            const preview = document.getElementById(previewId);
+            preview.style.display = preview.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
 </body>
 </html>
