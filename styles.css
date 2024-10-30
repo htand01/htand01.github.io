@@ -18,10 +18,16 @@ header {
 }
 
 header .logo {
-    max-width: 700px;
+    max-width: 700px; /* Desktop size */
     height: auto;
-    margin-bottom: 5px;
 }
+
+@media (max-width: 600px) {
+    header .logo {
+        max-width: 100%; /* Mobile size */
+    }
+}
+
 
 main {
     max-width: 800px;
