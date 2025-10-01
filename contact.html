@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Heidi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/heidi_logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img src="images/heidi_logo.png" alt="Heidi logo" />
+      </a>
+      <nav id="navMenuContact" class="nav-menu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="arts.html">Art & Illustrations</a>
+        <a href="data.html">Data Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Contact Me</h1>
+      <p class="page-desc">Interested in commissioning work or discussing a data role? Drop me a line.</p>
+    </section>
+
+    <section class="contact-form">
+        <form id="customContactForm">
+          <label>
+            Your name
+            <input type="text" name="entry.1111111111" placeholder="Your name" required>
+          </label>
+          <label>
+            Your email
+            <input type="email" name="entry.2222222222" placeholder="Your email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="entry.3333333333" rows="6" placeholder="Your message" required></textarea>
+          </label>
+          <button type="submit" class="cta">Send</button>
+          <p id="thankYouMessage" style="display:none; color:green; margin-top:1rem;">
+            Thanks! Your message has been submitted.
+          </p>
+        </form>
+      </section>
+      
+    </section>
+
+
+        <!-- SOCIAL -->
+        <footer class="social">
+            <p class="findme">Find me on social media</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/heidi_scribbles/?igsh=ZzNsc2hjb3ZpbDUw&utm_source=qr#" target="_blank" rel="noopener">
+                <img src="images/insta.png" alt="Instagram" />
+              </a>
+              <a href="https://www.linkedin.com/in/heidi-tandiono/" target="_blank" rel="noopener">
+                <img src="images/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+          </footer>
+          
+  </main>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

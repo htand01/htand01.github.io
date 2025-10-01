@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Data Projects — Heidi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/heidi_logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img src="images/heidi_logo.png" alt="Heidi logo" />
+      </a>
+      <nav id="navMenuData" class="nav-menu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="arts.html">Art & Illustrations</a>
+        <a href="data.html">Data Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <h1>Data Projects &amp; Analytics</h1>
+      <p class="page-desc">Short description about your data work — dashboards, scripts, reproducible analyses, etc.</p>
+    </section>
+
+    <!-- Highlighted project -->
+    <section class="highlight">
+        <h2>Highlighted Project</h2>
+        <div class="highlight-card">
+          <a href="https://docs.google.com/document/d/1Gurq78qIlZX-VhvSuEdOXe8-_HGxo7abB5Shrfzu5b8/edit?usp=sharing" target="_blank">
+            <img src="images/ADHD_ext_thumbnail.png" alt="Highlighted data project thumbnail">
+          </a>
+          <div class="highlight-info">
+            <h3>Chrome extension designed for users with ADHD</h3>
+            <p>Inattentiveness, frequent task switching, and digital clutter pose persistent challenges for individuals with ADHD, particularly during web browsing. This project investigates how browser tab management tools can better support users with attention difficulties. Through iterative design and user feedback, I prototyped and evaluated three interventions: a tab auto-closer with color-coded visual age indicators, AI-generated tab labels, and a side panel for organizing tabs into groups. Drawing from participant input, I developed a medium-fidelity prototype that combines a visual aging system with a toggleable sidebar for tab grouping and customizable settings. This integrated design aims to help users reduce tab overload, prioritize attention, and maintain focus in multi-tab environments. Click on the thumbnail to open the project docs.
+            </p>
+          </div>
+        </div>
+      </section>
+
+<!-- Projects Section -->
+<section class="projects">
+    <h2>Projects</h2>
+  
+    <!-- Project 1 -->
+    <div class="project-card">
+        <!-- Banner -->
+        <div class="project-banner" onclick="togglePreview(event, 'preview1')">
+          <div class="project-info">
+            <h3>Analyzing real estate profitability</h3>
+            <p>[Tableau public dashboard & group project]</p>
+          </div>
+        </div>
+      
+        <!-- Dropdown Preview -->
+        <div id="preview1" class="project-preview">
+          <!-- Tableau Embed Code -->
+          <div class='tableauPlaceholder' id='vizRealEstate' style='width: 100%; height: 100%;'>
+            <noscript>
+              <a href='#'><img alt='Real Estate Profitability ' 
+                  src='https://public.tableau.com/static/images/Re/RealEstateProfitabilityGuide/OpportunityExplorer/1_rss.png' 
+                  style='border: none' />
+              </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='RealEstateProfitabilityGuide/OpportunityExplorer' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image' 
+                  value='https://public.tableau.com/static/images/Re/RealEstateProfitabilityGuide/OpportunityExplorer/1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-US' />
+            </object>
+          </div>
+          <script type='text/javascript'>
+            var divElement = document.getElementById('vizRealEstate');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if (divElement.offsetWidth > 800) {
+                vizElement.style.width='1000px';
+                vizElement.style.height='927px';
+            } else if (divElement.offsetWidth > 500) {
+                vizElement.style.width='1000px';
+                vizElement.style.height='927px';
+            } else {
+                vizElement.style.width='100%';
+                vizElement.style.height='400px';
+            }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
+      
+          <!-- Direct Link to Tableau poster -->
+          <a href="https://drive.google.com/file/d/1WzH5mRJLPDaJSfKbFB6kc3xkOjaAdF8c/view?usp=drive_link" 
+             target="_blank" class="preview-link">View project poster</a>
+        </div>
+      </div>
+  
+      <!-- Project 2 -->
+    <div class="project-card">
+        <div class="project-banner" onclick="togglePreview(event, 'preview2')">
+        <div class="project-info">
+            <h3>Another project</h3>
+            <p>[R, Python, SQL]</p>
+        </div>
+        </div>
+    
+        <div id="preview2" class="project-preview">
+        <iframe 
+            src="https://docs.google.com/document/d/1qd43-odnNQ494dHLgvZ84tYh_GZ3Pdn7/preview" 
+            width="100%" 
+            height="600" 
+            style="border: none;">
+        </iframe>
+    
+        <!-- Direct Link -->
+        <a href="https://docs.google.com/document/d/1qd43-odnNQ494dHLgvZ84tYh_GZ3Pdn7/edit?usp=sharing" 
+            target="_blank" 
+            class="preview-link">
+            Open in Google Docs
+        </a>
+        </div>
+    </div>
+  
+  </section>
+        <!-- SOCIAL -->
+        <footer class="social">
+            <p class="findme">Find me on social media</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/heidi_scribbles/?igsh=ZzNsc2hjb3ZpbDUw&utm_source=qr#" target="_blank" rel="noopener">
+                <img src="images/insta.png" alt="Instagram" />
+              </a>
+              <a href="https://www.linkedin.com/in/heidi-tandiono/" target="_blank" rel="noopener">
+                <img src="images/linkedin.png" alt="LinkedIn" />
+              </a>
+            </div>
+          </footer>
+  </main>
+
+  <script>
+    function togglePreview(event, id) {
+      event.preventDefault();
+      const preview = document.getElementById(id);
+      preview.style.display = preview.style.display === 'block' ? 'none' : 'block';
+    }
+    </script>
+    
+    <script type='text/javascript'>
+        var divElement = document.getElementById('vizRealEstate');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = "100%";
+        vizElement.style.height = "100%"; 
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+</body>
+</html>

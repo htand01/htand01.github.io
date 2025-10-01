@@ -1,216 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heidi Tandiono - Homepage</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heidi — Art & Data Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons / treat images as favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/heidi_logo.png">
+  <link rel="apple-touch-icon" href="images/heidi_logo.png">
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="Name 2.PNG" alt="Heidi Tandiono Logo" class="logo">
-    </header>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">
+        <img src="images/heidi_logo.png" alt="Heidi logo" />
+      </a>
 
-    <main>
-        <section id="about">
-            <h1>Hi there! 👋 I'm Heidi, a data analyst passionate about transforming complex data into actionable insights. I have a background in biochemistry and am currently pursuing my Master’s in Analytics. I enjoy working at the intersection of data science and public health, and I love collaborating on projects that make a difference. In my spare time, I like to draw!</h1>
-        </section>
-        
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <a href="#" onclick="togglePreview(event, 'preview7')">Analyzing real estate profitability</a> [Tableau public dashboard & group project]
-                    <div id="preview7" class="project-preview">
-                        <!-- Tableau Embed Code -->
-                        <div class='tableauPlaceholder' id='vizRealEstate' style='position: relative'>
-                            <noscript>
-                                <a href='#'><img alt='Real Estate Profitability ' 
-                                    src='https://public.tableau.com/static/images/Re/RealEstateProfitabilityGuide/OpportunityExplorer/1_rss.png' 
-                                    style='border: none' />
-                                </a>
-                            </noscript>
-                            <object class='tableauViz' style='display:none;'>
-                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                                <param name='embed_code_version' value='3' />
-                                <param name='site_root' value='' />
-                                <param name='name' value='RealEstateProfitabilityGuide/OpportunityExplorer' />
-                                <param name='tabs' value='no' />
-                                <param name='toolbar' value='yes' />
-                                <param name='static_image' 
-                                    value='https://public.tableau.com/static/images/Re/RealEstateProfitabilityGuide/OpportunityExplorer/1.png' />
-                                <param name='animate_transition' value='yes' />
-                                <param name='display_static_image' value='yes' />
-                                <param name='display_spinner' value='yes' />
-                                <param name='display_overlay' value='yes' />
-                                <param name='display_count' value='yes' />
-                                <param name='language' value='en-US' />
-                            </object>
-                        </div>
-                        <script type='text/javascript'>
-                            var divElement = document.getElementById('vizRealEstate');
-                            var vizElement = divElement.getElementsByTagName('object')[0];
-                            if ( divElement.offsetWidth > 800 ) {
-                                vizElement.style.width='1000px';
-                                vizElement.style.height='927px';
-                            } else if ( divElement.offsetWidth > 500 ) {
-                                vizElement.style.width='1000px';
-                                vizElement.style.height='927px';
-                            } else {
-                                vizElement.style.width='100%';
-                                vizElement.style.height='400px';
-                            }
-                            var scriptElement = document.createElement('script');
-                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                        </script>
-                
-                        <!-- Direct Link to Tableau Dashboard -->
-                        <a href="https://public.tableau.com/views/RealEstateProfitabilityGuide/OpportunityExplorer" 
-                           target="_blank" class="preview-link">Open Dashboard</a>
-                    </div>
-                </li>                
-                <li>
-                    <a href="#" onclick="togglePreview(event, 'preview6')">Exploring medical device recalls</a> [Tableau public dashboard]
-                    <div id="preview6" class="project-preview">
-                        <!-- Tableau Embed Code -->
-                        <div class='tableauPlaceholder' id='viz1730263425019' style='position: relative'>
-                            <noscript>
-                                <a href='#'><img alt='Main dashboard ' 
-                                    src='https://public.tableau.com/static/images/Me/MedicalDevices_17302553498370/Maindashboard/1_rss.png' 
-                                    style='border: none' />
-                                </a>
-                            </noscript>
-                            <object class='tableauViz' style='display:none;'>
-                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                                <param name='embed_code_version' value='3' />
-                                <param name='site_root' value='' />
-                                <param name='name' value='MedicalDevices_17302553498370/Maindashboard' />
-                                <param name='tabs' value='no' />
-                                <param name='toolbar' value='yes' />
-                                <param name='static_image' 
-                                    value='https://public.tableau.com/static/images/Me/MedicalDevices_17302553498370/Maindashboard/1.png' />
-                                <param name='animate_transition' value='yes' />
-                                <param name='display_static_image' value='yes' />
-                                <param name='display_spinner' value='yes' />
-                                <param name='display_overlay' value='yes' />
-                                <param name='display_count' value='yes' />
-                                <param name='language' value='en-US' />
-                            </object>
-                        </div>
-                        <script type='text/javascript'>
-                            var divElement = document.getElementById('viz1730263425019');
-                            var vizElement = divElement.getElementsByTagName('object')[0];
-                            if ( divElement.offsetWidth > 800 ) {
-                                vizElement.style.width='1000px';
-                                vizElement.style.height='927px';
-                            } else if ( divElement.offsetWidth > 500 ) {
-                                vizElement.style.width='1000px';
-                                vizElement.style.height='927px';
-                            } else {
-                                vizElement.style.width='100%';
-                                vizElement.style.height='400px';
-                            }
-                            var scriptElement = document.createElement('script');
-                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                        </script>
-                    
-                        <!-- Direct Link to Tableau Dashboard -->
-                        <a href="https://public.tableau.com/views/MedicalDevices_17302553498370/Maindashboard" 
-                           target="_blank" class="preview-link">Open Dashboard</a>
-                    </div>
-                </li>                    
-                <li>
-                    <a href="#" onclick="togglePreview(event, 'preview2')">Diabetes in women</a> [RShiny app & course project]
-                    <div id="preview2" class="project-preview">
-                        <iframe src="https://htand01.shinyapps.io/final/" title="Diabetes in Women RShiny App" width="100%" height="400" style="border: none;"></iframe>
-                        <a href="https://htand01.shinyapps.io/final/" target="_blank" class="preview-link">Open Full App</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" onclick="togglePreview(event, 'preview4')">Global boardgame popularity</a> [Tableau public dashboard]
-                    <div id="preview4" class="project-preview">
-                        <!-- Tableau Embed Code Starts Here -->
-                        <div class='tableauPlaceholder' id='viz1730244056725' style='position: relative'>
-                            <noscript>
-                                <a href='#'>
-                                    <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Bo/Board_games/Dashboard1/1_rss.png' style='border: none' />
-                                </a>
-                            </noscript>
-                            <object class='tableauViz' style='display:none;'>
-                                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                                <param name='embed_code_version' value='3' />
-                                <param name='site_root' value='' />
-                                <param name='name' value='Board_games/Dashboard1' />
-                                <param name='tabs' value='no' />
-                                <param name='toolbar' value='yes' />
-                                <param name='static_image' value='https://public.tableau.com/static/images/Bo/Board_games/Dashboard1/1.png' />
-                                <param name='animate_transition' value='yes' />
-                                <param name='display_static_image' value='yes' />
-                                <param name='display_spinner' value='yes' />
-                                <param name='display_overlay' value='yes' />
-                                <param name='display_count' value='yes' />
-                                <param name='language' value='en-US' />
-                            </object>
-                        </div>
-                        <script type='text/javascript'>
-                            var divElement = document.getElementById('viz1730244056725');
-                            var vizElement = divElement.getElementsByTagName('object')[0];
-                            if ( divElement.offsetWidth > 800 ) {
-                                vizElement.style.width='1000px'; vizElement.style.height='1327px';
-                            } else if ( divElement.offsetWidth > 500 ) {
-                                vizElement.style.width='1000px'; vizElement.style.height='1327px';
-                            } else {
-                                vizElement.style.width='100%'; vizElement.style.height='400px';
-                            }
-                            var scriptElement = document.createElement('script');
-                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                            vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                        </script>
-                        <!-- Tableau Embed Code Ends Here -->
-        
-                        <a href="https://public.tableau.com/views/Board_games/Dashboard1" target="_blank" class="preview-link">Open Full Dashboard</a>
-                    </div>
-                </li>
-                <li>
-                    <a href="#" onclick="togglePreview(event, 'preview3')">Global carbon emissions</a> [RShiny app]
-                    <div id="preview3" class="project-preview" style="display: none;"> <!-- Ensure it's hidden initially -->
-                        <iframe src="https://htand01.shinyapps.io/Global_Carbon_Emissions/" title="Global carbon emissions" width="100%" height="400" style="border: none;"></iframe>
-                        <a href="https://htand01.shinyapps.io/Global_Carbon_Emissions/" target="_blank" class="preview-link">Open Full App</a>
-                    </div>
-                </li>                
-                <li>
-                    <a href="#" onclick="togglePreview(event, 'preview5')">Optimizing kidney donations</a> [Analytical plan & course project]
-                    <div id="preview5" class="project-preview">
-                        <iframe src="https://docs.google.com/document/d/1YQMDXml4bAs80ejucrA9eR6luBY27SIL/preview" 
-                                width="100%" height="600" style="border: none;"></iframe>
-                        <a href="https://docs.google.com/document/d/1YQMDXml4bAs80ejucrA9eR6luBY27SIL/edit?usp=sharing" 
-                           target="_blank" class="preview-link">Open Full Document</a>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/heiditandiono/" target="_blank">LinkedIn</a></li>
-            </ul>
-        </section>
-    </main>
-    <script>
-        function togglePreview(event, previewId) {
-            event.preventDefault();
-            var previews = document.querySelectorAll('.project-preview');
-            previews.forEach(function(preview) {
-                if (preview.id === previewId) {
-                    preview.style.display = preview.style.display === 'none' ? 'block' : 'none';
-                } else {
-                    preview.style.display = 'none';
-                }
-            });
-        }
-    </script>
+      <nav id="navMenu" class="nav-menu" aria-hidden="true">
+        <a href="index.html">Home</a>
+        <a href="arts.html">Art & Illustrations</a>
+        <a href="data.html">Data Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+    <!-- ABOUT -->
+    <section class="about">
+      <div class="about-header">
+        <h1 class="name">Heidi Tandiono</h1>
+        <img class="logo-inline" src="images/heidi_logo.png" alt="Heidi logo" width="106" height="106">
+      </div>
+
+      <h2 class="tagline">Illustrator & Data Analyst</h2>
+      <hr class="about-line">
+
+      <p class="intro">
+        Hi, I’m Heidi—a data analyst and artist based in the Greater Seattle Area. Storytelling has been part of my life since childhood, whether through numbers, visuals, or creative expression. I love exploring patterns in data and turning complex information into insights that anyone can understand. At the same time, my artistic practice often begins in my sketchbook, where I capture memories, places I’ve visited, and moments that spark inspiration. Through both analytics and artwork, I hope to share a little of my world with you.
+      </p>
+    </section>
+
+    <!-- TWO BOXES -->
+    <section class="choices">
+      <a class="choice-card" href="arts.html" id="artCard" aria-label="Go to Art and Illustrations">
+        <div class="choice-inner">
+          <h2 class="choice-title">Art &amp; Illustrations</h2>
+          <img src="images/art_icon.png" alt="Art icon" class="choice-icon">
+        </div>
+      </a>
+
+      <a class="choice-card" href="data.html" id="dataCard" aria-label="Go to Data Projects and Analytics">
+        <div class="choice-inner">
+          <h2 class="choice-title">Data Projects &amp; Analytics</h2>
+          <img src="images/data_icon.png" alt="Data icon" class="choice-icon">
+        </div>
+      </a>
+    </section>
+
+    <!-- SOCIAL -->
+    <footer class="social">
+      <p class="findme">Find me on social media</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/heidi_scribbles/?igsh=ZzNsc2hjb3ZpbDUw&utm_source=qr#" target="_blank" rel="noopener">
+          <img src="images/insta.png" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com/in/heidi-tandiono/" target="_blank" rel="noopener">
+          <img src="images/linkedin.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
