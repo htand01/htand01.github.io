@@ -25,31 +25,22 @@
 
   <main class="container">
     <section class="page-header">
-      <h1>Contact Me</h1>
       <p class="page-desc">Interested in commissioning work or discussing a data role? Drop me a line.</p>
     </section>
-
+  
     <section class="contact-form">
-        <form id="customContactForm">
-          <label>
-            Your name
-            <input type="text" name="entry.1111111111" placeholder="Your name" required>
-          </label>
-          <label>
-            Your email
-            <input type="email" name="entry.2222222222" placeholder="Your email" required>
-          </label>
-          <label>
-            Message
-            <textarea name="entry.3333333333" rows="6" placeholder="Your message" required></textarea>
-          </label>
-          <button type="submit" class="cta">Send</button>
-          <p id="thankYouMessage" style="display:none; color:green; margin-top:1rem;">
-            Thanks! Your message has been submitted.
-          </p>
-        </form>
-      </section>
-      
+      <!-- Embedded Google Form -->
+      <div class="form-wrapper" style="max-width:1000px; margin:2rem auto;">
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeRLatRx-o3tSKnOq0IF7zT2HTMRQgUzdKfLns-VfZerj0jow/viewform?embedded=true" 
+          width="1000" 
+          height="800" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0">
+          Loading…
+        </iframe>
+      </div>
     </section>
 
 
