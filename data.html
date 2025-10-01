@@ -27,6 +27,8 @@
     <section class="page-header">
       <h1>Data Projects &amp; Analytics</h1>
       <p class="page-desc">These are examples of my school and personal data projects — interactive dashboards, scripts, and reproducible analyses that highlight my experience with data processing, visualization, and analytics techniques."</p>
+      
+      <hr class = "art-line">
     </section>
 
     <!-- Highlighted project -->
@@ -167,5 +169,16 @@
         scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);
       </script>
+
+<script>
+    const menuBtn = document.querySelector('.menu-btn');
+    const navMenu = document.querySelector('.nav-menu');
+    if (menuBtn && navMenu) {
+      menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('show');
+      });
+    }
+  </script>
+  
 </body>
 </html>

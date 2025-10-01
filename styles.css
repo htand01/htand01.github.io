@@ -76,7 +76,7 @@ a, button, .clickable {
 
 /* For mobile we transform nav-menu into dropdown hidden by default */
 @media (max-width:820px){
-  .nav-menu{
+  .nav-menu {
     position:absolute;
     right:12px;
     top:62px;
@@ -85,9 +85,9 @@ a, button, .clickable {
     padding:8px;
     border-radius:8px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    display:none;
+    display:none; /* hidden by default */
   }
-  .nav-menu.show{ display:flex; }
+  .nav-menu.show { display:flex; }
 }
 
 /* MAIN container */
@@ -363,3 +363,39 @@ button.cta{
 
 /* small helpers */
 .small-note{ color:#666; font-size:0.9rem }
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+  /* 1. Resize name + logo on homepage */
+  .about-header {
+    flex-direction: column;   /* stack logo above/below name */
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .about-header .name {
+    font-size: clamp(2rem, 8vw, 4rem); /* scales with screen width */
+  }
+
+  .about-header .logo-inline img {
+    max-width: 60%; /* keeps it responsive */
+    height: auto;
+  }
+
+  /* 2. Highlighted projects thumbnail above text */
+  .highlight-card {
+    flex-direction: column;  /* stack vertically */
+    align-items: center;     /* center content */
+    text-align: center;      /* align text under image */
+  }
+
+  .highlight-card img {
+    width: 100%;   /* take full width of container */
+    max-width: 320px; /* don’t get too huge */
+    margin-bottom: 1rem;
+  }
+
+  .highlight-info {
+    text-align: center;
+  }
+}
