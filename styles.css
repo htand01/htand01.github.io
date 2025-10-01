@@ -51,6 +51,19 @@ a, button, .clickable {
   flex-direction:column;
   gap:4px;
 }
+
+/* Hide menu button on desktop */
+.menu-btn {
+  display: none;
+}
+
+/* Show it only on mobile */
+@media (max-width:820px) {
+  .menu-btn {
+    display: flex;
+  }
+}
+
 .hamb{
   display:block;
   width:22px;
@@ -329,48 +342,48 @@ a, button, .clickable {
   overflow: hidden;  /* crops any extra */
 }
 
-/* contact form */
+/* Contact form wrapper */
 .contact-form {
-  display: flex;
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center if needed */
-  flex-direction: column;  /* stack children vertically */
-  margin: 2rem auto;       /* some spacing from top/bottom */
-}
-.contact-form form {
-  width: 100%;             /* take full width of container */
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;               /* space between fields */
+  width: 100%;        /* Always take full width of its container */
+  max-width: 100%;    /* Prevent shrinking */
+  box-sizing: border-box; /* Make padding/border count inside width */
 }
 
-.contact-form label{ display:flex; flex-direction:column; gap:6px; font-weight:600; color:#333; }
-.contact-form input, .contact-form textarea{
-  padding:10px;
-  border-radius:8px;
-  border:1px solid #ddd;
-  font-family:var(--body-font);
-}
-button.cta{
-  background:var(--red);
-  color:#fff;
-  border:0;
-  padding:10px 14px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:700;
+/* Style the iframe embed */
+.contact-form iframe {
+  width: 100%;        /* responsive full width */
+  height: 700px;      /* adjust depending on your form length */
+  border: none;       /* remove iframe border */
+  border-radius: 8px; /* optional: rounded edges */
 }
 
 /* small helpers */
 .small-note{ color:#666; font-size:0.9rem }
 
 /* MOBILE ADJUSTMENTS */
-@media (max-width: 768px) {
-  /* 1. Resize name + logo on homepage */
+@media (max-width: 1000px) {
+  /* Stack logo + name vertically */
   .about-header {
-    flex-direction: column;   /* stack logo above/below name */
+    flex-direction: column;
     gap: 0.5rem;
     text-align: center;
+  }
+
+  /* Resize name to fit small screens */
+  .name {
+    font-size: 6rem; 
+  }
+
+  .logo-inline {
+    order: -1;                /* logo comes first */
+    display: block;           
+    margin-bottom: 0.5rem;    /* space between logo and name */
+  }
+
+  /* Resize logo */
+  .logo-inline img {
+    max-width: 120px;  /* scale logo width */
+    height: auto;
   }
 
   .about-header .name {
@@ -378,7 +391,7 @@ button.cta{
   }
 
   .about-header .logo-inline img {
-    max-width: 60%; /* keeps it responsive */
+    max-width: 60%; 
     height: auto;
   }
 
@@ -391,7 +404,7 @@ button.cta{
 
   .highlight-card img {
     width: 100%;   /* take full width of container */
-    max-width: 320px; /* don’t get too huge */
+    max-width: 320px; 
     margin-bottom: 1rem;
   }
 
